@@ -1,5 +1,6 @@
 import csv
 import json
+import sys
 
 def convert (json_file_path, csv_file_path):
   items = []
@@ -21,3 +22,5 @@ def make_rows (headers, items):
       row += [item[header]]
     rows += [row]
   return rows
+
+convert(sys.argv[1], sys.argv[2])
